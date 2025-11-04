@@ -94,7 +94,10 @@ function applyLanguage(lang) {
         retypeText();
     }
     
-    // 3D tilt efektini yeniden uygula (yeni eklenen elemanlar için)
+    // --- DÜZELTME ---
+    // Scroll animasyon gözlemcisini yeniden çalıştır
+    initScrollAnimations();
+    // 3D tilt efektini yeni kartlara uygula
     init3DTiltEffect();
 }
 
@@ -163,17 +166,12 @@ function renderBlog(lang) {
 
 
 // ==========================================================
-// ORİJİNAL JAVASCRIPT KODLARINIZ (Değişiklik yok veya minimum)
+// ORİJİNAL JAVASCRIPT KODLARINIZ
 // ==========================================================
-
-// Preloader (Sadece gizleme kısmı, yükleme kısmı 'fetch' içine taşındı)
-// (Orijinal 'window.addEventListener('load', ...)' bloğu 
-// 'fetch' içine taşındığı için buradan kaldırıldı)
 
 // Particles Animation
 (function animateParticles() {
     const canvas = document.getElementById('particles');
-    // Canvas yoksa (hata durumunda) fonksiyonu durdur
     if (!canvas) return; 
     
     const ctx = canvas.getContext('2d');
@@ -246,21 +244,30 @@ function renderBlog(lang) {
 })();
 
 // Scroll Animations
-(function initScrollAnimations() {
+// --- DÜZELTME ---
+// Gözlemciyi (observer) global bir değişkende tut
+let scrollObserver;
+function initScrollAnimations() {
+    // Eğer daha önce bir gözlemci oluşturulduysa, önce bağlantısını kes
+    if (scrollObserver) {
+        scrollObserver.disconnect();
+    }
+    
     const observerOptions = { threshold: .1, rootMargin: '0px 0px -100px 0px' };
-    const observer = new IntersectionObserver(entries => {
+    scrollObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
+                scrollObserver.unobserve(entry.target); // Animasyon tetiklendikten sonra izlemeyi bırak
             }
         });
     }, observerOptions);
-    // Not: Bu artık sadece statik elemanları (bölüm başlıkları) izleyecek.
-    // Dinamik eklenen kartlar (beceri, proje) zaten class'larını alıyor.
+
+    // Hem statik hem de dinamik olarak eklenen TÜM ilgili elemanları seç
     document.querySelectorAll('.scroll-reveal,.scroll-reveal-left,.scroll-reveal-right').forEach(el => {
-        observer.observe(el);
+        scrollObserver.observe(el);
     });
-})();
+}
 
 // Scroll to Top Button
 (function initScrollTop() {
@@ -301,32 +308,26 @@ const modalBody = document.getElementById('modalBody');
 function showModal(title, content) {
     if (!blogModal) return;
     modalTitle.textContent = title;
-    modalBody.textContent = content; // Düz metin olarak ayarla (güvenlik)
+    modalBody.textContent = content;
     blogModal.classList.add('visible');
-    document.body.style.overflow = 'hidden'; // Scroll'u kilitle
+    document.body.style.overflow = 'hidden';
 }
 
 function hideModal() {
     if (!blogModal) return;
     blogModal.classList.remove('visible');
-    document.body.style.overflow = ''; // Scroll'u aç
+    document.body.style.overflow = '';
 }
 
-// Bu fonksiyon renderBlog() tarafından çağrılır
+// --- DÜZELTME ---
+// Hatalı klonlama kodu kaldırıldı.
 function initBlogModalListeners() {
-    document.querySelectorAll('.blog-read-more').forEach(btn => {
-        // Eski listener'ları temizle (opsiyonel ama iyi bir pratik)
-        btn.replaceWith(btn.cloneNode(true));
-    });
-    
-    // Yeni klonlanmış butonlara listener ekle
     document.querySelectorAll('.blog-read-more').forEach(btn => {
         btn.addEventListener('click', e => {
             e.preventDefault();
             const card = e.target.closest('.blog-card');
             const blogId = card.getAttribute('data-blog-id');
             
-            // Veriyi 'siteVerisi' objesinden al (eski 'blogData' yerine)
             if (siteVerisi.blogDetaylari && siteVerisi.blogDetaylari[blogId]) {
                 const blog = siteVerisi.blogDetaylari[blogId][currentLanguage];
                 showModal(blog.title, blog.content);
@@ -337,7 +338,7 @@ function initBlogModalListeners() {
     });
 }
 
-// Modal kapatma butonları (Bunlar statik olduğu için en başta bir kez tanımlanabilir)
+// Modal kapatma butonları (Bunlar statik)
 if(modalClose) modalClose.addEventListener('click', hideModal);
 if(blogModal) blogModal.addEventListener('click', e => {
     if (e.target === blogModal) {
@@ -351,26 +352,22 @@ document.addEventListener('keydown', e => {
 });
 
 // --- GÜNCELLENMİŞ 3D Tilt Effect ---
-// Bu fonksiyon dinamik elemanlar eklendikten sonra (applyLanguage içinde) çağrılmalı
+// --- DÜZELTME ---
+// Hatalı klonlama kodu kaldırıldı.
 function init3DTiltEffect() {
     document.querySelectorAll('.skill-card, .project-card, .blog-card').forEach(card => {
-        // Eski listener'ları temizle
-        const newCard = card.cloneNode(true);
-        card.parentNode.replaceChild(newCard, card);
-
-        // Yeniden listener ekle
-        newCard.addEventListener('mousemove', e => {
-            const rect = newCard.getBoundingClientRect();
+        card.addEventListener('mousemove', e => {
+            const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
             const rotateX = (y - centerY) / 10;
             const rotateY = (centerX - x) / 10;
-            newCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
         });
-        newCard.addEventListener('mouseleave', () => {
-            newCard.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
         });
     });
 }
