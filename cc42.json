@@ -1,0 +1,192 @@
+{
+  "profil": {
+    "tr": {
+      "isim": "Cihan USLU",
+      "unvan": "Sistem Yöneticisi",
+      "bio": "Teknolojiye ve dijital dünyaya tutkuyla bağlı bir sistem yöneticisiyim. Bilgi işlem, ağ yönetimi, internet ve mobil teknolojiler üzerine çalışıyor; her sistemin daha güvenli, hızlı ve akıllı hale gelmesi için çözümler geliştiriyorum. Sürekli öğrenmeye ve yenilikleri projelerime yansıtmaya önem veriyorum."
+    },
+    "en": {
+      "isim": "Cihan USLU",
+      "unvan": "System Administrator",
+      "bio": "I am a system administrator with a passion for technology and the digital world. I work on information processing, network management, internet and mobile technologies; I develop solutions to make every system more secure, faster and smarter. I place great importance on continuous learning and reflecting innovations in my projects."
+    }
+  },
+  "nav": {
+    "tr": {
+      "hakkimda": "Hakkımda",
+      "beceriler": "Beceriler",
+      "projeler": "Projeler",
+      "blog": "Blog",
+      "iletisim": "İletişim"
+    },
+    "en": {
+      "hakkimda": "About",
+      "beceriler": "Skills",
+      "projeler": "Projects",
+      "blog": "Blog",
+      "iletisim": "Contact"
+    }
+  },
+  "hakkimda": {
+    "tr": {
+      "baslik": "Hakkımda",
+      "icerik": "Teknoloji ve bilgi işlem alanında sürekli gelişmeyi hedefliyorum. Sistem yönetimi, ağ güvenliği ve web teknolojilerinde edindiğim deneyimleri; daha verimli, güvenli ve yenilikçi dijital çözümler üretmek için kullanıyorum. Hedefim, her geçen gün gelişen teknolojiyle birlikte kendimi de geliştirerek, kurumlara ve projelere değer katmak."
+    },
+    "en": {
+      "baslik": "About Me",
+      "icerik": "I aim for continuous development in the field of technology and information processing. I use my experience in system management, network security and web technologies to produce more efficient, secure and innovative digital solutions. My goal is to add value to organisations and projects by developing myself in line with the ever-evolving technology."
+    }
+  },
+  "beceriler": {
+    "tr": { "baslik": "Becerilerim" },
+    "en": { "baslik": "My Skills" },
+    "liste": [
+      {
+        "tr": { "ad": "Sistem Yönetimi", "seviye": "İleri Seviye" },
+        "en": { "ad": "System Administration", "seviye": "Advanced Level" }
+      },
+      {
+        "tr": { "ad": "Ağ ve Güvenlik Yönetimi", "seviye": "İleri Seviye" },
+        "en": { "ad": "Network & Security Management", "seviye": "Advanced Level" }
+      },
+      {
+        "tr": { "ad": "Web Teknolojileri (PHP, HTML, CSS)", "seviye": "Orta-İleri Seviye" },
+        "en": { "ad": "Web Technologies (PHP, HTML, CSS)", "seviye": "Intermediate-Advanced Level" }
+      },
+      {
+        "tr": { "ad": "Veritabanı Yönetimi (MySQL, SQLite)", "seviye": "Orta Seviye" },
+        "en": { "ad": "Database Management (MySQL, SQLite)", "seviye": "Intermediate Level" }
+      },
+      {
+        "tr": { "ad": "Bilgi İşlem ve Donanım Desteği", "seviye": "İleri Seviye" },
+        "en": { "ad": "IT & Hardware Support", "seviye": "Advanced Level" }
+      },
+      {
+        "tr": { "ad": "Teknoloji ve Mobil Sistemler", "seviye": "Orta-İleri Seviye" },
+        "en": { "ad": "Technology & Mobile Systems", "seviye": "Intermediate-Advanced Level" }
+      }
+    ]
+  },
+  "projeler": {
+    "tr": { "baslik": "Projelerim" },
+    "en": { "baslik": "My Projects" },
+    "liste": [
+      {
+        "tr": { "ad": "Degerden.com", "aciklama": "Modern, kullanıcı dostu ve tam entegre e-ticaret platformu. Kırtasiye, kitap ve ofis ürünlerinde profesyonel tedarik çözümleri sunuyor." },
+        "en": { "ad": "Degerden.com", "aciklama": "A modern, user-friendly and fully integrated e-commerce platform. It offers professional supply solutions for stationery, books and office products." }
+      },
+      {
+        "tr": { "ad": "K12 Eğitim Paneli", "aciklama": "Okullar ve öğretmenler için özel hazırlanmış, öğrenci yönetimi ve sınav takip özellikleri içeren online eğitim paneli." },
+        "en": { "ad": "K12 Education Panel", "aciklama": "An online education panel specially designed for schools and teachers, featuring student management and exam tracking capabilities." }
+      },
+      {
+        "tr": { "ad": "Kurumsal Tedarik Sistemi", "aciklama": "Şirketlerin periyodik kırtasiye ve ofis ihtiyaçlarını kolayca sipariş edebildiği, fiyat teklifi ve onay süreçleriyle entegre bir sistem." },
+        "en": { "ad": "Corporate Supply System", "aciklama": "A system that allows companies to easily order their periodic stationery and office supplies, integrated with quotation and approval processes." }
+      },
+      {
+        "tr": { "ad": "POS Satış Ekranı", "aciklama": "Dokunmatik kasalar için geliştirilmiş sade ve hızlı perakende satış ekranı. Mikro Jump ERP ile entegre çalışıyor." },
+        "en": { "ad": "POS Sales Screen", "aciklama": "A simple and fast retail sales screen developed for touchscreen cash registers. It works in conjunction with Mikro Jump ERP." }
+      },
+      {
+        "tr": { "ad": "Ziyaretçi Takip Sistemi", "aciklama": "Web sitelerinde kullanıcı hareketlerini kayıt altına alan ve istatistiksel analiz sağlayan akıllı izleme altyapısı." },
+        "en": { "ad": "Visitor Tracking System", "aciklama": "An intelligent tracking infrastructure that records user activity on websites and provides statistical analysis." }
+      },
+      {
+        "tr": { "ad": "Fotokopi Hizmet Yönetimi", "aciklama": "Online dosya yükleme, otomatik fiyat hesaplama ve teslim süreci takibi sunan gelişmiş fotokopi sipariş sistemi." },
+        "en": { "ad": "Photocopy Service Management", "aciklama": "An advanced photocopy ordering system offering online file uploading, automatic price calculation and delivery process tracking." }
+      }
+    ]
+  },
+  "blog": {
+    "tr": { "baslik": "Blog", "devami": "Devamını Oku →" },
+    "en": { "baslik": "Blog", "devami": "Read More →" },
+    "liste": [
+      {
+        "id": 1,
+        "tarih": "24 Ekim 2025",
+        "tr": {
+          "baslik": "Modern Web Geliştirmede Tasarımın Gücü",
+          "ozet": "Kullanıcı deneyimini merkeze alan modern web tasarımlarının dönüşüm oranlarına etkisini ve tasarım-işlev dengesini anlatan rehber niteliğinde bir yazı."
+        },
+        "en": {
+          "baslik": "The Power of Design in Modern Web Development",
+          "ozet": "A guide explaining the impact of modern web designs centered on user experience on conversion rates and the balance between design and functionality."
+        }
+      },
+      {
+        "id": 2,
+        "tarih": "20 Ekim 2025",
+        "tr": {
+          "baslik": "E-Ticaret Altyapılarında Performans Optimizasyonu",
+          "ozet": "PHP, MySQL ve önbellekleme teknikleriyle e-ticaret sitelerinde sayfa hızını artırmanın yollarını pratik örneklerle anlatan teknik bir makale."
+        },
+        "en": {
+          "baslik": "Performance Optimization in E-Commerce Infrastructures",
+          "ozet": "A technical article explaining ways to increase page speed on e-commerce websites using PHP, MySQL and caching techniques, with practical examples."
+        }
+      },
+      {
+        "id": 3,
+        "tarih": "15 Ekim 2025",
+        "tr": {
+          "baslik": "Küçük İşletmeler İçin Dijital Dönüşüm Stratejileri",
+          "ozet": "KOBİ'lerin dijital dünyaya adapte olurken atması gereken adımları, başarılı örneklerle sade bir dille açıklayan stratejik bir yazı."
+        },
+        "en": {
+          "baslik": "Digital Transformation Strategies for Small Businesses",
+          "ozet": "A strategic article explaining the steps SMEs need to take to adapt to the digital world, illustrated with successful examples and written in plain language."
+        }
+      }
+    ]
+  },
+  "blogDetaylari": {
+    "1": {
+      "tr": {
+        "title": "Modern Web Geliştirmede Tasarımın Gücü",
+        "content": "Kullanıcı deneyimi (UX), modern web sitelerinin başarısının temel taşıdır. İyi tasarlanmış bir arayüz, kullanıcıların sitenizde daha fazla zaman geçirmesini ve dönüşüm oranlarının artmasını sağlar... (tüm yazının devamı)"
+      },
+      "en": {
+        "title": "The Power of Design in Modern Web Development",
+        "content": "User experience (UX) is the cornerstone of modern website success. A well-designed interface ensures users spend more time on your site and increases conversion rates... (full post content)"
+      }
+    },
+    "2": {
+      "tr": {
+        "title": "E-Ticaret Altyapılarında Performans Optimizasyonu",
+        "content": "E-ticaret sitelerinde hız her şeydir. Sayfa yükleme süresinin 1 saniye artması, dönüşüm oranlarını %7 oranında düşürebilir... (tüm yazının devamı)"
+      },
+      "en": {
+        "title": "Performance Optimization in E-Commerce Infrastructures",
+        "content": "Speed is everything on e-commerce sites. A 1 second increase in page load time can reduce conversion rates by 7%... (full post content)"
+      }
+    },
+    "3": {
+      "tr": {
+        "title": "Küçük İşletmeler İçin Dijital Dönüşüm Stratejileri",
+        "content": "Dijital dönüşüm artık lüks değil, zorunluk. Pandemi sonrası dünyada online varlığı olmayan işletmeler ciddi dezavantajla karşılaşıyor... (tüm yazının devamı)"
+      },
+      "en": {
+        "title": "Digital Transformation Strategies for Small Businesses",
+        "content": "Digital transformation is no longer a luxury, but a necessity. In the post-pandemic world, businesses without an online presence face serious disadvantages... (full post content)"
+      }
+    }
+  },
+  "iletisim": {
+    "tr": {
+      "baslik": "İletişim",
+      "epostaDugme": "E-posta Gönder"
+    },
+    "en": {
+      "baslik": "Contact",
+      "epostaDugme": "Send Email"
+    }
+  },
+  "footer": {
+    "tr": {
+      "copyright": "&copy; 2025 Cihan USLU. Tüm hakları saklıdır."
+    },
+    "en": {
+      "copyright": "&copy; 2025 Cihan USLU. All rights reserved."
+    }
+  }
+}
