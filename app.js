@@ -167,12 +167,8 @@ function renderBlog(lang) {
 // ==========================================================
 
 // Preloader (Sadece gizleme kısmı, yükleme kısmı 'fetch' içine taşındı)
-window.addEventListener('load', () => {
-    // Normalde preloader 'fetch' başarılı olunca gizlenir,
-    // ama fetch başarısız olursa diye eski kodun bir kısmı kalabilir.
-    // Ancak en doğrusu bunu 'fetch'in .then() bloğuna taşımaktır (yukarıda yaptım).
-    // document.getElementById('preloader').classList.add('hidden');
-});
+// (Orijinal 'window.addEventListener('load', ...)' bloğu 
+// 'fetch' içine taşındığı için buradan kaldırıldı)
 
 // Particles Animation
 (function animateParticles() {
@@ -306,7 +302,6 @@ function showModal(title, content) {
     if (!blogModal) return;
     modalTitle.textContent = title;
     modalBody.textContent = content; // Düz metin olarak ayarla (güvenlik)
-    // Eğer HTML istiyorsanız: modalBody.innerHTML = content;
     blogModal.classList.add('visible');
     document.body.style.overflow = 'hidden'; // Scroll'u kilitle
 }
